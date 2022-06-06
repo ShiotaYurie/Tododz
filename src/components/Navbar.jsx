@@ -6,14 +6,16 @@ import Button from '@mui/material/Button';
 export const Navber = () => {
     return (
             <>
-            <p>ナビゲーション</p>
+            <div className="nav-area">
             {/* <ul>
                <li><input type="text" /></li>
                <li><Button variant="outlined" startIcon={<SearchIcon  />}> 検索</Button></li>
             </ul> */}
             <input type="text" />
+            <div className="nav-button">
             <Button variant="outlined" startIcon={<SearchIcon  />}> 検索</Button>
-            
+            </div>
+            </div>
             </>
     );
 }

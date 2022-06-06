@@ -1,14 +1,14 @@
 import React from "react";
 import { Navber } from "./Navbar";
 import { MemoList } from "./MemoList";
-import { InputMemo } from "./InputMemo";
+// import { InputMemo } from "./InputMemo";
 
 export const Home = () => {
     return(
         <>
-        <div>
+        <div className="home">
         <Navber />
-        < InputMemo />
+        {/* < InputMemo /> */}
         <MemoList />
         </div>
         </>
