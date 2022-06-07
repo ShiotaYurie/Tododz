@@ -19,6 +19,11 @@ export const MemoList = () => {
         // alert(memoText);
     };
 
+    const onClickDelite = (index) => {
+        const deliteMemos = [...completeMemos];//stateをnewMemosに格納
+        deliteMemos.splice(index, 1); //削除する関数(splice) 配列の0番目から1つ削除
+        setCompleteMemos(deliteMemos);
+    };
 
     return(
         <>
@@ -31,8 +36,8 @@ export const MemoList = () => {
                         <div key={memo} className="list-row">
                         <li className = "list-line">{memo}</li>
                         <div className="list-button">
-                        <DefaultButton className="plus-button" color="blue" buttonName="追加"/>
-                        <DefaultButton className="delete-button" color="blue" buttonName="削除"/>
+                        <DefaultButton className="plus-button" color="blue" buttonName="編集"/>
+                        <DefaultButton clickButton={onClickDelite} className="delete-button" color="blue" buttonName="削除"/>
                         </div>
                         </div>
                     );
