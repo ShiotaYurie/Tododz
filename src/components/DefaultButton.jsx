@@ -11,11 +11,11 @@ export const DefaultButton = (props) => {
     };
 
     //Click
-    const {clickButton} = props;
+    const {clickButton, changeButton} = props;
 
     return(
         <>
-        <button  onClick={clickButton} style={buttonStyle}>{buttonName}</button>
+        <button onChange={changeButton} onClick={clickButton} style={buttonStyle}>{buttonName}</button>
         </>
     );
 }
